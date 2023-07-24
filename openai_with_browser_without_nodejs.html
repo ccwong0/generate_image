@@ -7,8 +7,10 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
     async function askQuestion() {
-      const apiKey = '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'; 
+      const apiKey = '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'; 
       const apiUrl = 'https://api.openai.com/v1/chat/completions';
+
+      console.log("test");
 
       const response = await axios.post(apiUrl, {
         model: "gpt-3.5-turbo",
