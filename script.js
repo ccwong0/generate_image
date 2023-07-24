@@ -1,5 +1,5 @@
 // Load JSON data and populate the table
-fetch("car_data.json")
+fetch("https://ccwong0.github.io/generate_image/car_data.json")
   .then((response) => response.json())
   .then((data) => {
     const carTable = document.getElementById("carTable");
