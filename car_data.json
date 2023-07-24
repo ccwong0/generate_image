@@ -1,0 +1,17 @@
+{
+  "carManufacturers": [
+    {
+      "manufacturer": "Toyota",
+      "models": ["Camry", "Corolla", "Rav4", "Prius"]
+    },
+    {
+      "manufacturer": "Honda",
+      "models": ["Civic", "Accord", "CR-V", "Pilot"]
+    },
+    {
+      "manufacturer": "Ford",
+      "models": ["Focus", "Fusion", "Escape", "Explorer"]
+    }
+    // Add more data here if needed
+  ]
+}
