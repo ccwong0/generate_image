@@ -12,6 +12,5 @@
       "manufacturer": "Ford",
       "models": ["Focus", "Fusion", "Escape", "Explorer"]
     }
-    // Add more data here if needed
   ]
 }
