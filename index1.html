@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpenAI Chat API Example</title>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    async function askQuestion() {
+      const apiKey = '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'; 
+      const apiUrl = 'https://api.openai.com/v1/chat/completions';
+
+      console.log("test");
+
+      const response = await axios.post(apiUrl, {
+        model: "gpt-3.5-turbo",
+        messages: [
+          {
+            "role": "system",
+            "content": "You're a parent who is kind and understanding"
+          },
+          {
+            "role": "user",
+            "content": "Dad, I hit the head of a student with a hammer"
+          }
+        ],
+        temperature: 0,
+        max_tokens: 64,
+        top_p: 1.0,
+        frequency_penalty: 0.0,
+        presence_penalty: 0.0,
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`
+        }
+      });
+
+      console.log(response.data.choices[0].message.content);
+    }
+
+    askQuestion();
+  </script>
+</body>
+</html>
