@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Call Example</title>
+</head>
+<body>
+  <button id="fetchDataBtn">Fetch Data</button>
+  <pre id="apiResponse"></pre>
+
+  <script>
+    document.getElementById('fetchDataBtn').addEventListener('click', function() {
+      fetch('https://jsonplaceholder.typicode.com/posts/1')
+        .then(response => response.json())
+        .then(data => {
+          // Display the API response in the 'apiResponse' pre element
+          document.getElementById('apiResponse').textContent = JSON.stringify(data, null, 2);
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+    });
+  </script>
+</body>
+</html>
